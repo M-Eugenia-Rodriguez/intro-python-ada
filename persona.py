@@ -1,4 +1,4 @@
-import datetime
+from datetime import date
 
 class Persona(object):
 
@@ -11,10 +11,11 @@ class Persona(object):
     def mostrar(self):
         print(f"nombre : {self.nombre} edad :{self.edad} dni : {self.dni}")
 
-    def edad(self):
-        hoy = datetime.datetime.now().date()
-        fecha_nacimiento = datetime.date(1989, 3, 15)
-        edad = =int((td-bd). days /365.25)
+    def edad(self, fecha_nacimiento):
+        fecha_actual = datetime.date.today()
+        edad = fecha_actual.year - fecha_nacimiento.year
+        return edad
+
 
     def es_mayor_de_edad(self, edad):
         if edad >= 18:
